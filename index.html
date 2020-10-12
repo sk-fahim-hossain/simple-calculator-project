@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Project</title>
+    <style>
+        .main {
+            width: 200px;
+            height: 230px;
+            background: grey;
+            text-align: center;
+            padding: 10px 5px;
+            border-radius: 10px;
+        }
+        
+        input[type=button] {
+            padding: 10px 10px;
+            margin: 5px 5px;
+            border: 0.5px solid black;
+            border-radius: 50%;
+            background: grey;
+        }
+        
+        input[type=text] {
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background: lightgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <input type="text" id="display"><br>
+        <input type="button" value="1" onclick="calculate(this.value)">
+        <input type="button" value="2" onclick="calculate(this.value)">
+        <input type="button" value="3" onclick="calculate(this.value)">
+        <input type="button" value="+" onclick="calculate(this.value)"><br>
+        <input type="button" value="4" onclick="calculate(this.value)">
+        <input type="button" value="5" onclick="calculate(this.value)">
+        <input type="button" value="6" onclick="calculate(this.value)">
+        <input type="button" value="-" onclick="calculate(this.value)"><br>
+        <input type="button" value="7" onclick="calculate(this.value)">
+        <input type="button" value="8" onclick="calculate(this.value)">
+        <input type="button" value="9" onclick="calculate(this.value)">
+        <input type="button" value="*" onclick="calculate(this.value)"><br>
+        <input type="button" value="0" onclick="calculate(this.value)">
+        <input type="button" value="C" onclick="display.value = '' ">
+        <input type="button" value="=" onclick="display.value = eval(display.value)">
+        <input type="button" value="/" onclick="calculate(this.value)">
+
+    </div>
+
+    <script>
+        function calculate(x) {
+            document.getElementById("display").value = document.getElementById("display").value + x;
+        }
+    </script>
+
+</body>
+
+</html>
